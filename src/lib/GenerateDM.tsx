@@ -5,11 +5,11 @@ import { z } from "zod";
 import type { FormData } from "@/type";
 
 const groq = createGroq({
-  apiKey: import.meta.env.GROQ_API_KEY,
+  apiKey: import.meta.env.VITE_GROQ_API_KEY,
 });
 
 const google = createGoogleGenerativeAI({
-  apiKey: import.meta.env.GOOGLE_GENERATIVE_AI_API_KEY,
+  apiKey: import.meta.env.VITE_GOOGLE_GENERATIVE_AI_API_KEY,
 });
 
 const GeneratedMessageSchema = z.object({

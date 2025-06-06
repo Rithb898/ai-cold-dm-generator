@@ -8,6 +8,8 @@ import { PostHogProvider } from "posthog-js/react";
 
 const options = {
   api_host: import.meta.env.VITE_PUBLIC_POSTHOG_HOST,
+  capture_exceptions: true, // This enables capturing exceptions using Error Tracking
+  debug: import.meta.env.MODE === "development",
 };
 
 createRoot(document.getElementById("root")!).render(
